@@ -1,21 +1,8 @@
-![Python](https://img.shields.io/badge/python-3.11+-blue.svg)
-![LangGraph](https://img.shields.io/badge/orchestration-LangGraph-orange.svg)
-![CrewAI](https://img.shields.io/badge/fraud_crew-CrewAI-purple.svg)
-![LLM](https://img.shields.io/badge/LLM-Gemini%20%7C%20Groq-green.svg)
-![FastAPI](https://img.shields.io/badge/API-FastAPI-009688.svg)
-![React](https://img.shields.io/badge/UI-React%20%2B%20MUI-61DAFB.svg)
-
-> **Learn AI/ML interactively at [AI-ML Companion](https://aimlcompanion.ai/)** - Guided walkthroughs, architecture decisions, hands-on challenges, and narrated overviews for every project.
-
-> **Explore the blog for this project [Blog Link](https://aimlcompanion.ai/module/aiAgents/smartClaimsProcessor)**
 
 # Smart Claims Processor
 
-> **Who this is for** - anyone learning how multi-agent AI systems (LangGraph + CrewAI), production guardrails (cost caps, token limits, PII masking), human-in-the-loop approvals (interrupt/resume with durable checkpointing), agentic evaluation (LLM-as-judge), agent memory (ChromaDB + semantic search), pluggable LLM providers, and country-aware configuration fit together in a real-world full-stack app. Basic Python + a terminal is all you need.
 
-> **Using Claude Code?** This project is fully set up for [Claude Code](https://claude.ai/code) - custom slash commands (`/test`, `/submit-claim`, `/reset-data`), safety hooks, permission rules, and a `CLAUDE.md` context file. See the **[Claude Code Guide](docs/claude-code-guide.md)** to learn how to use skills, hooks, memory, subagents, and more to work with this codebase effectively.
 
-![High-Level Architecture](docs/images/high-level-architecture.svg)
 
 A production-style **multi-agent insurance claims system** built with **LangGraph** (orchestration) and **CrewAI** (fraud detection). A claimant submits a claim through a React UI, and the backend runs it through **7 specialist agents** - intake validation, fraud detection (3-agent CrewAI crew), damage assessment, policy compliance, settlement calculation, LLM-as-judge evaluation, and claimant notification.
 
@@ -61,11 +48,6 @@ A production-style **multi-agent insurance claims system** built with **LangGrap
 
 ## Architecture
 
-![System Architecture](docs/images/system-architecture.svg)
-
-![Pipeline Paths](docs/images/pipeline-paths.svg)
-
----
 
 ## Prerequisites
 
@@ -94,8 +76,8 @@ A production-style **multi-agent insurance claims system** built with **LangGrap
 
 ```bash
 # 1. Clone and open project folder in VS Code (or any IDE)
-git clone https://github.com/genieincodebottle/aiml-companion.git
-cd aiml-companion/projects/smart-claims-processor
+git clone 
+
 
 # 2. Create venv + install backend deps in the VSCode (or any IDE)
 uv venv
@@ -132,7 +114,7 @@ uvicorn api.main:app --port 8000
 In a **second terminal (You can do split terminal in the VSCode)**, start the frontend (no venv needed - this is Node.js):
 
 ```bash
-cd aiml-companion/projects/smart-claims-processor/frontend
+
 npm install
 npm run dev        # starts http://localhost:3000
 ```
